@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation Menu (GoHighLevel: c-nav-menu-v2) */
+        nav.c-nav-menu-v2 {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav.c-nav-menu-v2 .c-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav.c-nav-menu-v2 .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        nav.c-nav-menu-v2 ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav.c-nav-menu-v2 a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        nav.c-nav-menu-v2 a:hover {
+            color: #007bff;
+        }
+
+        /* Main Content Section */
+        .fullSection {
+            background-color: #ffffff;
+            margin: 2rem 0;
+        }
+
+        .fullSection.noBorder {
+            border: none;
+        }
+
+        .fullSection.radius0 {
+            border-radius: 0;
+        }
+
+        /* Content Wrapper */
+        .c-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Article/Blog Content Styles */
+        article, main {
+            line-height: 1.8;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #34495e;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        h5, h6 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Links */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Blockquotes */
+        blockquote {
+            border-left: 4px solid #007bff;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #666;
+            font-style: italic;
+            background-color: #f0f8ff;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Code Blocks */
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', 'Monaco', monospace;
+            font-size: 0.95em;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            line-height: 1.4;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: inherit;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: #ffffff;
+        }
+
+        table th {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Horizontal Rule */
+        hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 2rem 0;
+        }
+
+        /* Footer Section (GoHighLevel: c-section) */
+        footer.c-section {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #34495e;
+        }
+
+        footer .c-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        footer .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        footer .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        footer .footer-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        footer .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section a:hover {
+            color: #007bff;
+        }
+
+        footer .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .c-wrapper {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            nav.c-nav-menu-v2 .c-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav.c-nav-menu-v2 ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (GoHighLevel: c-nav-menu-v2) -->
+    <nav id="nav-menu-v2" class="c-nav-menu-v2 c-wrapper">
+        <div class="logo">Your Brand</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section (GoHighLevel: fullSection c-section) -->
+    <div class="fullSection noBorder radius0 none c-section c-wrapper" id="blog-content-section">
+        <article>
+            {{BLOG_CONTENT}}
+        </article>
+    </div>
+
+    <!-- Footer Section (GoHighLevel: fullSection c-section) -->
+    <footer class="fullSection noBorder radius0 none c-section" style="background-color: #2c3e50; color: #ecf0f1; margin: 0;">
+        <div class="c-wrapper">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your company mission and description goes here. Build amazing content with ease.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li>Email: info@example.com</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Address: Your City, State</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
